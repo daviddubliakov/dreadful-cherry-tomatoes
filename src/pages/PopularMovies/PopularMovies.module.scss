@@ -1,0 +1,38 @@
+@use "src/styles/_mixins.scss";
+@import "src/styles/_variables.scss";
+
+.moviesWrapper {
+  min-height: calc(100vh - 63px - 223px);
+}
+
+.moviesContainer {
+  @include mixins.layoutSpacing;
+  padding-top: 17px;
+  padding-bottom: 60px;
+  background-color: $darkGreyColor;
+  height: 100%;
+}
+
+.moviesListWrapper {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  & > div {
+    width: 19.2%;
+
+    &:not(:nth-child(5n)) {
+      margin-right: 1%;
+    }
+  }
+}
+
+.heading {
+  margin-bottom: 18px;
+}
+
+@media screen and (max-width: 1400px) {
+  .moviesWrapper {
+    height: calc(100vh - 63px - 224px);
+  }
+}

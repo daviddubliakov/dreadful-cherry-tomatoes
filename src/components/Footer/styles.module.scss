@@ -1,0 +1,26 @@
+@use "src/styles/_mixins.scss";
+@import "src/styles/_variables.scss";
+
+.footerContainer {
+  @include mixins.layoutSpacing;
+  background-color: $blackColor;
+  height: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 22px;
+}
+
+.actionsContainer {
+  display: flex;
+
+  a:first-child {
+    margin-right: 14px;
+  }
+}
+
+.description {
+  color: $whiteColor;
+  font-size: 12px;
+}

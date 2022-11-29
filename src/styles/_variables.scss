@@ -1,0 +1,15 @@
+$blackColor: #000;
+$blackTransparentColor: rgba(0, 0, 0, 0.8);
+$deepRedColor: #c42521;
+$greyColor: #676767;
+$darkGreyColor: #1a1a1a;
+$whiteColor: #fff;
+
+:export {
+  black-color: $blackColor;
+  black-transparent-color: $blackTransparentColor;
+  deep-red-color: $deepRedColor;
+  grey-color: $greyColor;
+  white-color: $whiteColor;
+  dark-gry-color: $darkGreyColor;
+}

@@ -1,0 +1,84 @@
+@import "src/styles/_variables.scss";
+
+.moviCardContainer {
+  cursor: pointer;
+  margin-top: 2%;
+  position: relative;
+
+  &:hover {
+    div {
+      opacity: 1;
+      height: 65%;
+      width: 100%;
+
+      > h2,
+      span,
+      p {
+        height: auto;
+      }
+    }
+
+    > h2 {
+      opacity: 0;
+    }
+  }
+}
+
+.movieTitle {
+  background-color: $blackTransparentColor;
+  color: $whiteColor;
+  height: 48px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 13px 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.movieDescription {
+  display: block;
+  position: absolute;
+  height: 0;
+  bottom: 0;
+  opacity: 0;
+  padding: 8px 14px;
+  background-color: $blackTransparentColor;
+  color: $whiteColor;
+  transition: 0.8s ease;
+
+  p {
+    font-size: 14px;
+    line-height: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    height: 0;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 11px;
+    height: 0;
+  }
+
+  span {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 7px;
+    display: block;
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .movieDescription > p {
+    display: none !important;
+  }
+}

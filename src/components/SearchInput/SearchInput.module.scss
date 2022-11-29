@@ -1,0 +1,28 @@
+@use "src/styles/_mixins.scss";
+@import "src/styles/_variables.scss";
+
+.searchContainer {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 9px;
+  left: 16px;
+}
+
+.searchInput {
+  width: 100%;
+  border-radius: 5.5px;
+  border: none;
+  font-size: 14px;
+  padding: 11px 15px 11px 44px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $greyColor;
+  }
+}
