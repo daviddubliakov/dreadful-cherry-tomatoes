@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useReducer, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import classNames from "classnames";
 import debounce from "lodash.debounce";
 
 import MovieCard from "../../components/MovieCard";
@@ -92,7 +93,11 @@ const PopularMovies: React.FC = () => {
   return (
     <div className={styles.moviesWrapper}>
       <SearchBar onChange={debouncedResults} />
-      <div className={styles.moviesContainer}>
+      <div
+        className={classNames(styles.moviesContainer, {
+          [styles.loading]: moviesData.currentMovies === null,
+        })}
+      >
         <h1 className={styles.heading}>Popular Movies</h1>
         <div>
           {moviesData.filteredMovies === null ||

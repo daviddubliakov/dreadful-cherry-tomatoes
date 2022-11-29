@@ -3,6 +3,7 @@
 
 .moviesWrapper {
   min-height: calc(100vh - 63px - 223px);
+  position: relative;
 }
 
 .moviesContainer {
@@ -10,7 +11,15 @@
   padding-top: 17px;
   padding-bottom: 60px;
   background-color: $darkGreyColor;
-  height: 100%;
+  height: calc(100% - 67px);
+}
+
+.loading {
+  position: absolute;
+  top: 68px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .moviesListWrapper {
@@ -31,7 +40,7 @@
   margin-bottom: 18px;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   .moviesWrapper {
     height: calc(100vh - 63px - 224px);
   }
